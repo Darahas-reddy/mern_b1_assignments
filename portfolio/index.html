@@ -1,167 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Home - Portfolio</title>
+  <title>Home - CSE Portfolio</title>
   <style>
-    * {
-      box-sizing: border-box;
+    * { box-sizing: border-box; }
+    body {
+      background-color: #181818;
+      color: #e0e0e0;
       margin: 0;
       padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #121212;
-      color: #e0e0e0;
-      line-height: 1.6;
-    }
-
-    nav {
-      background-color: #1e1e1e;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-      margin-bottom: 2rem;
-    }
-
-    ul {
-      list-style: none;
+      font-family: Arial, sans-serif;
+      height: 100vh;
       display: flex;
-      justify-content: center;
-      gap: 30px;
+      flex-direction: column;
     }
 
-    li a {
+    .navbar {
+      background-color: #222;
+      padding: 15px 0;
+      text-align: center;
+      border-bottom: 2px solid #333;
+    }
+
+    .nav-link {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 0 10px;
+      border: 1px solid #444;
+      border-radius: 4px;
       text-decoration: none;
       color: #90caf9;
-      font-weight: 500;
-      padding: 6px 12px;
-      transition: 0.3s;
-      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
     }
 
-    li a:hover {
-      background-color: #2196f3;
-      color: #fff;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    h1, h2 {
-      color: #ffffff;
-      margin-bottom: 15px;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 50px 20px;
-      background: #1e1e1e;
-      border-radius: 10px;
-      margin-bottom: 2rem;
-      box-shadow: 0 0 8px rgba(33, 150, 243, 0.2);
-    }
-
-    .section {
-      background-color: #1e1e1e;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 2rem;
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
-    }
-
-    .projects-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .project {
+    .nav-link:hover {
+      border-color: #90caf9;
       background-color: #2a2a2a;
-      padding: 15px;
-      border-radius: 8px;
-      flex: 1 1 calc(33.33% - 20px);
-      box-shadow: 0 2px 6px rgba(255,255,255,0.05);
-      transition: transform 0.2s;
     }
 
-    .project:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 10px rgba(144, 202, 249, 0.2);
-    }
-
-    footer {
+    .section-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 1rem;
-      background-color: #1e1e1e;
-      border-top: 1px solid #333;
-      margin-top: 3rem;
-      color: #aaa;
+      padding: 40px;
     }
 
-    @media (max-width: 768px) {
-      .project {
-        flex: 1 1 100%;
-      }
+    h1 {
+      font-size: 64px;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 0 0 10px #90caf9, 0 0 20px #90caf9;
+      margin-bottom: 20px;
+    }
 
-      ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-      }
+    p {
+      font-size: 24px;
+      color: #cccccc;
+    }
+
+    .section-box {
+      border: 2px solid #333;
+      padding: 50px;
+      border-radius: 10px;
+      background-color: #202020;
+      max-width: 800px;
+    }
+
+    .section-box:hover {
+      box-shadow: 0 0 30px #90caf9;
+      transition: 0.3s ease;
     }
   </style>
 </head>
-
 <body>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="container">
-    <section class="hero">
-      <h2>Hello, I'm Darahas Reddy</h2>
-      <p>I design and build user-friendly websites with clean code and great UI.</p>
-    </section>
-
-    <section class="section">
-      <h2>Featured Skills</h2>
-      <p>HTML, CSS (Box Model, Flexbox), Git, Responsive Design.</p>
-    </section>
-
-    <section class="section">
-      <h2>Top Projects</h2>
-      <div class="projects-grid">
-        <div class="project">
-          <h3>Project 1</h3>
-          <p>A landing page built using HTML & CSS</p>
-        </div>
-        <div class="project">
-          <h3>Project 2</h3>
-          <p>Responsive portfolio layout using box model</p>
-        </div>
-        <div class="project">
-          <h3>Project 3</h3>
-          <p>Multi-page website with internal CSS navigation</p>
-        </div>
-      </div>
-    </section>
+  <div class="navbar">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="skills.html">Skills</a>
+    <a class="nav-link" href="contact.html">Contact</a>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Tekula Darahas Reddy. All rights reserved.</p>
-  </footer>
-
+  <div class="section-container">
+    <div class="section-box">
+      <h1>Tekula Darahas Reddy</h1>
+      <p>Welcome to my portfolio.</p>
+    </div>
+  </div>
 </body>
 </html>
