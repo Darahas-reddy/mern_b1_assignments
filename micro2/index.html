@@ -1,0 +1,25 @@
+<!-- Difficulty: easy -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Notes stack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📋 Mini Notes Stack</h1>
+
+  <!-- ── TEACHING-BUG #1 (syntax) ── -->
+  <input id="taskInput" placeholder="Write a task here..."/>
+
+  <button id="addBtn" onclick="addEventListener()">Add Note</button>
+  <button id="clearBtn" onclick="clearAllTasks()">Clear All</button>
+
+  <div id="taskList" >
+    <div id="emptyState" class="empty">No notes yet.</div>
+  </div>
+
+  <!-- TODO: Add a message when the list is empty -->
+  <script src="app.js"></script>
+</body>
+</html>
