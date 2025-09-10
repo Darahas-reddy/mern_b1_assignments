@@ -1,0 +1,30 @@
+<!-- Difficulty: very easy -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Motivation Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📝 Motivation Board</h1>
+
+  <input id="taskInput" placeholder="Enter a note..." />
+  
+  <!-- ── TEACHING-BUG #1 (syntax) ── -->
+  <button onclick="showTask()">Show Note</button>
+
+  <!-- ── TEACHING-BUG #3 (intent) ── -->
+  <button onclick="clearTask()">Clear</button>
+
+  <div id="output"></div>
+
+  <!-- BONUS buttons -->
+  <button onclick="makeBold()">Make Bold</button>
+  <button onclick="tryHTML()">Try innerHTML</button>
+  <p id="message">Waiting for action...</p>
+  <button onclick="myFn()">Click me</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
